@@ -36,7 +36,7 @@ function FromTenToHundred(num) {
     if (value >= 10 && value <= 19) {
         stop = true;
         return map1[value];
-    } else if (value >= 20 && value <= 90){
+    } else if (value >= 20 && value <= 99){
         return map2[Math.floor(value/10)]
     }
     return '';
