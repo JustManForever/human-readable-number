@@ -22,6 +22,7 @@ module.exports = function toReadable (num) {
         } else if (arr.length === 1) {
             OutputString += `${toTen(num)}`
         }
+        stop = false;
         return OutputString.trim();
 }
 
