@@ -12,7 +12,7 @@ module.exports = function toReadable (num) {
         if(arr.length === 3) {
             OutputString += `${MoreThanHundred(num)} ${FromTenToHundred(num)}`;
             if (!stop) {
-                OutputString = `${OutputString} ${toTen(num)}`
+                OutputString = `${OutputString.trim()} ${toTen(num)}`
             }
         } else if (arr.length === 2) {
             OutputString += `${FromTenToHundred(num)}`
@@ -39,6 +39,7 @@ function FromTenToHundred(num) {
     } else if (value >= 20 && value <= 90){
         return map2[Math.floor(value/10)]
     }
+    return '';
 }
 
 function toTen(num) {
